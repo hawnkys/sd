@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The core configuration file for the framework is the default (struts.xml) file
+and should reside on the classpath of the webapp (generally /WEB-INF/classes). -->
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- devMode equals debug information and reload everything for every request -->
+  	<constant name="struts.devMode" value="true" />
+  		<package name="sdproject2" extends="struts-default">
+  		
+  			<action name="inicialize" class="action.InicializeAction" method="execute">
+				<result name="success" type="dispatcher">/NavBar.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+  		
+			<action name="ColDepInfo" class="action.ColDepInfoAction" method="execute">
+				<result name="success" type="dispatcher">/user_register.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="ListUsers" class="action.ListUsersAction" method="execute">
+				<result name="success" type="dispatcher">/user_edit_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="UserInfo" class="action.UserInfoAction" method="execute">
+				<result name="success" type="dispatcher">/user_edit.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="RegisteUser" class="action.RegisteUserAction" method="execute">
+				<result name="success" type="dispatcher">/user_register_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="DeleteUsersList" class="action.ListUsersAction" method="execute">
+				<result name="success" type="dispatcher">/user_delete_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="DeleteUser" class="action.DeleteUserAction" method="execute">
+				<result name="success" type="dispatcher">/user_delete_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="CheckUserVotes" class="action.ListUsersAction" method="execute">
+				<result name="success" type="dispatcher">/user_votes_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="ListUserVotes" class="action.ListUserVotesAction" method="execute">
+				<result name="success" type="dispatcher">/user_votes.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+
+			<action name="NoNeed" class="action.NoNeedAction" method="execute">
+				<result name="success" type="dispatcher">/college_create.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="CreateCollege" class="action.CreateCollegeAction" method="execute">
+				<result name="success" type="dispatcher">/college_create_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+
+			<action name="ListCollegers" class="action.ListCollegersAction" method="execute">
+				<result name="success" type="dispatcher">/college_edit_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="ColInfo" class="action.SingleColInfoAction" method="execute">
+				<result name="success" type="dispatcher">/college_edit.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+
+			<action name="EditCollege" class="action.EditCollegeAction" method="execute">
+				<result name="success" type="dispatcher">/college_edit_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="DeleteListCollegers" class="action.ListCollegersAction" method="execute">
+				<result name="success" type="dispatcher">/college_delete_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+
+			<action name="DeleteCollege" class="action.DeleteCollegeAction" method="execute">
+				<result name="success" type="dispatcher">/college_delete_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="ListsInfo" class="action.ListsInfoAction" method="execute">
+				<result name="success" type="dispatcher">/create_election.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="CreateElection" class="action.CreateElectionAction" method="execute">
+				<result name="success" type="dispatcher">/create_election_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetUsersInfo" class="action.ListUsersAction" method="execute">
+				<result name="success" type="dispatcher">/list_create.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="CreateList" class="action.CreateListAction" method="execute">
+				<result name="success" type="dispatcher">/list_create_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetListsInfo" class="action.ListsInfoAction" method="execute">
+				<result name="success" type="dispatcher">/list_edit_lists.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetListInfo" class="action.GetListInfoAction" method="execute">
+				<result name="success" type="dispatcher">/list_edit.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="EditList" class="action.EditListAction" method="execute">
+				<result name="success" type="dispatcher">/list_edit_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetLists" class="action.ListsInfoAction" method="execute">
+				<result name="success" type="dispatcher">/list_delete_lists.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="DeleteList" class="action.DeleteListAction" method="execute">
+				<result name="success" type="dispatcher">/list_delete_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetElectionsList" class="action.GetElectionsAction" method="execute">
+				<result name="success" type="dispatcher">/election_edit_lists.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="ElectionInfo" class="action.ElectionInfoAction" method="execute">
+				<result name="success" type="dispatcher">/election_edit.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="EditElection" class="action.EditElectionAction" method="execute">
+				<result name="success" type="dispatcher">/election_edit_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetPastElectionsList" class="action.GetPastElectionsAction" method="execute">
+				<result name="success" type="dispatcher">/results_election_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetStatistics" class="action.GetStatisticsAction" method="execute">
+				<result name="success" type="dispatcher">/election_results.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetInfoForTable" class="action.GetInfoForTableAction" method="execute">
+				<result name="success" type="dispatcher">/table_create.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="CreateTable" class="action.CreateTableAction" method="execute">
+				<result name="success" type="dispatcher">/table_create_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetTableList" class="action.GetTableListAction" method="execute">
+				<result name="success" type="dispatcher">/table_delete_list.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="DeleteTable" class="action.DeleteTableAction" method="execute">
+				<result name="success" type="dispatcher">/table_delete_feedback.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+			
+			<action name="GetTableStatus" class="action.GetTableStatusAction" method="execute">
+				<result name="success" type="dispatcher">/table_status.jsp</result>
+				<result name="error" type="redirect">/error.jsp</result>
+			</action>
+		</package>
+</struts>
